@@ -1,0 +1,41 @@
+image: docker:latest
+
+variables:
+  DOCKER_IMAGE_BACKEND: "dashify-backend"
+  DOCKER_TAG: "latest"
+  CONTAINER_NAME_BACKEND: "dashify_backend"
+  DOCKER_COMPOSE_DEV_FILE: "docker-compose-dev.yml"
+  DOCKER_COMPOSE_PROD_FILE: "docker-compose-prod.yml"
+
+stages:
+  - deploy-dev
+  - deploy-prod
+
+#--------------------------------------------------
+#
+# Deploy DEV Environment
+#
+#--------------------------------------------------
+deploy-dev-backend:
+  stage: deploy-dev
+  script:
+    - echo "Building and Deploying Backend to Dev"
+    - docker build -t $DOCKER_IMAGE_BACKEND"_dev":$CI_COMMIT_SHA .
+    - docker tag $DOCKER_IMAGE_BACKEND"_dev":$CI_COMMIT_SHA $DOCKER_IMAGE_BACKEND"_dev":$DOCKER_TAG
+    - docker compose -f $DOCKER_COMPOSE_DEV_FILE up -d --build --no-deps
+  when: manual
+
+#--------------------------------------------------
+#
+# Deploy Prod Environment
+#
+#--------------------------------------------------
+
+deploy-prod-backend:
+  stage: deploy-prod
+  script:
+    - echo "Building and Deploying Backend to Prod"
+    - docker build -t $DOCKER_IMAGE_BACKEND"_prod":$CI_COMMIT_SHA .
+    - docker tag $DOCKER_IMAGE_BACKEND"_prod":$CI_COMMIT_SHA $DOCKER_IMAGE_BACKEND"_prod":$DOCKER_TAG
+    - docker compose -f $DOCKER_COMPOSE_PROD_FILE up -d --build --no-deps
+  when: manual

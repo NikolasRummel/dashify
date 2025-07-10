@@ -1,0 +1,17 @@
+services:
+  dashify_backend_prod:
+    image: dashify-backend_prod:${CI_COMMIT_SHA}
+    container_name: dashify_backend_prod
+    restart: always
+    ports:
+      - "8080:8080"
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:postgresql://dashify_prod-postgres:5432/dashify
+      SPRING_DATASOURCE_USERNAME: dashify
+      SPRING_DATASOURCE_PASSWORD: dashify
+    networks:
+      - prod-network
+
+networks:
+  prod-network:
+    external: true

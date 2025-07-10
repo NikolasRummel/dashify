@@ -1,0 +1,50 @@
+image: docker:latest
+
+variables:
+    DOCKER_TAG: "latest"
+    DOCKER_IMAGE_FRONTEND: "dashify-frontend_dev"
+    DOCKER_COMPOSE_DEV_FILE: "docker/docker-compose-dev.yml"
+    BACKEND_URL_DEV: "https://backend-dev.dashify.cloud/"
+    DOCS_OUTPUT_PATH: "public"
+
+stages:
+    - deploy-dev
+    - pages
+    - e2e
+
+deploy-dev-frontend:
+    stage: deploy-dev
+    script:
+        - echo "Building Frontend Docker Image for Dev"
+        - docker build --build-arg NEXT_PUBLIC_BACKEND_URL="$BACKEND_URL_DEV" -t $DOCKER_IMAGE_FRONTEND:$CI_COMMIT_SHA -f docker/Dockerfile .
+        - docker tag $DOCKER_IMAGE_FRONTEND:$CI_COMMIT_SHA $DOCKER_IMAGE_FRONTEND:$DOCKER_TAG
+        - docker compose -f $DOCKER_COMPOSE_DEV_FILE up -d --no-deps
+    when: manual
+
+pages:
+    stage: pages
+    script:
+        - echo "Generating Frontend TypeDoc"
+        - npm ci
+        - npx typedoc src/lib src/hooks src/types src/atoms --entryPointStrategy expand --out $DOCS_OUTPUT_PATH
+    artifacts:
+        paths:
+            - public
+    when: manual
+
+e2e:
+    stage: e2e
+    image: cypress/browsers:node16-chrome114
+    variables:
+        CYPRESS_BASE_URL: https://dev.dashify.cloud
+    script:
+        - echo "Installing dependencies..."
+        - npm ci
+        - echo "Running Cypress tests..."
+        - npx cypress run
+    when: manual
+    artifacts:
+        paths:
+            - cypress/screenshots
+            - cypress/videos
+        expire_in: 1 week

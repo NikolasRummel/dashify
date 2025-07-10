@@ -1,0 +1,15 @@
+services:
+  dashify_frontend_dev:
+    image: dashify-frontend:dev
+    container_name: dashify_frontend_dev
+    restart: always
+    ports:
+      - "3001:3000"
+    environment:
+      NEXT_PUBLIC_BACKEND_URL: "http://dashify_backend_dev:8080"
+    networks:
+      - dev-network
+
+networks:
+  dev-network:
+    external: true

@@ -1,0 +1,25 @@
+services:
+  postgres:
+    image: postgres:17
+    container_name: dashify_postgres_local
+    restart: no
+    ports:
+      - "5541:5432"
+    environment:
+      POSTGRES_PASSWORD: dashify
+      POSTGRES_USER: dashify
+      POSTGRES_DB: dashify
+
+  springboot:
+    build: .
+    container_name: dashify_springboot
+    restart: no
+    ports:
+      - "8080:8080"
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:postgresql://postgres:5432/dashify
+      SPRING_DATASOURCE_USERNAME: dashify
+      SPRING_DATASOURCE_PASSWORD: dashify
+      SPRING_PROFILES_ACTIVE: local
+    depends_on:
+      - postgres

@@ -1,0 +1,915 @@
+<!doctype html>
+<html
+	class="default"
+	lang="en"
+	data-base="./"
+>
+	<head>
+		<meta charset="utf-8" />
+		<meta
+			http-equiv="x-ua-compatible"
+			content="IE=edge"
+		/>
+		<title>frontend</title>
+		<meta
+			name="description"
+			content="Documentation for frontend"
+		/>
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1"
+		/>
+		<link
+			rel="stylesheet"
+			href="assets/style.css"
+		/>
+		<link
+			rel="stylesheet"
+			href="assets/highlight.css"
+		/>
+		<script
+			defer
+			src="assets/main.js"
+		></script>
+		<script
+			async
+			src="assets/icons.js"
+			id="tsd-icons-script"
+		></script>
+		<script
+			async
+			src="assets/search.js"
+			id="tsd-search-script"
+		></script>
+		<script
+			async
+			src="assets/navigation.js"
+			id="tsd-nav-script"
+		></script>
+	</head>
+	<body>
+		<script>
+			document.documentElement.dataset.theme =
+				localStorage.getItem("tsd-theme") || "os";
+			document.body.style.display = "none";
+			setTimeout(
+				() =>
+					window.app
+						? app.showPage()
+						: document.body.style.removeProperty("display"),
+				500,
+			);
+		</script>
+		<header class="tsd-page-toolbar">
+			<div class="tsd-toolbar-contents container">
+				<a
+					href="index.html"
+					class="title"
+					>frontend</a
+				>
+				<div id="tsd-toolbar-links"></div>
+				<button
+					id="tsd-search-trigger"
+					class="tsd-widget"
+					aria-label="Search"
+				>
+					<svg
+						width="16"
+						height="16"
+						viewBox="0 0 16 16"
+						fill="none"
+						aria-hidden="true"
+					>
+						<use href="assets/icons.svg#icon-search"></use>
+					</svg>
+				</button>
+				<dialog
+					id="tsd-search"
+					aria-label="Search"
+				>
+					<input
+						role="combobox"
+						id="tsd-search-input"
+						aria-controls="tsd-search-results"
+						aria-autocomplete="list"
+						aria-expanded="true"
+						autocapitalize="off"
+						autocomplete="off"
+						placeholder="Search the docs"
+						maxlength="100"
+					/>
+					<ul
+						role="listbox"
+						id="tsd-search-results"
+					></ul>
+					<div
+						id="tsd-search-status"
+						aria-live="polite"
+						aria-atomic="true"
+					>
+						<div>Preparing search index...</div>
+					</div>
+				</dialog>
+				<a
+					href="#"
+					class="tsd-widget menu"
+					id="tsd-toolbar-menu-trigger"
+					data-toggle="menu"
+					aria-label="Menu"
+					><svg
+						width="16"
+						height="16"
+						viewBox="0 0 16 16"
+						fill="none"
+						aria-hidden="true"
+					>
+						<use href="assets/icons.svg#icon-menu"></use></svg
+				></a>
+			</div>
+		</header>
+		<div class="container-main container">
+			<div class="col-content">
+				<div class="tsd-page-title"><h1>frontend</h1></div>
+				<div class="tsd-panel tsd-typography">
+					<div align="center">
+						<img
+							height="125px"
+							src="https://gitlab.com/dhbw-se/se-tinf23b6/g3-dashify/gitlab-profile/-/raw/main/assets/frontend.svg"
+							alt=""
+						/>
+						<h1>Frontend</h1>
+						<img
+							src="https://raw.githubusercontent.com/andreasbm/readme/master/assets/line.png"
+							alt=""
+						/>
+					</div>
+					<p>
+						Das Frontend ist ein modernes Next.js-Projekt, das stark
+						auf Komponenten, Module und TypeScript setzt. Diese
+						Struktur sorgt für sauberen, erweiterbaren Code und eine
+						klare Trennung der verschiedenen Anwendungsbereiche.
+					</p>
+					<hr />
+					<h2
+						id="projektstruktur"
+						class="tsd-anchor-link"
+					>
+						<strong>Projektstruktur</strong
+						><a
+							href="#projektstruktur"
+							aria-label="Permalink"
+							class="tsd-anchor-icon"
+							><svg
+								viewBox="0 0 24 24"
+								aria-hidden="true"
+							>
+								<use
+									href="assets/icons.svg#icon-anchor"
+								></use></svg
+						></a>
+					</h2>
+					<h3
+						id="wichtige-dateien-und-konfigurationen"
+						class="tsd-anchor-link"
+					>
+						<strong>Wichtige Dateien und Konfigurationen</strong
+						><a
+							href="#wichtige-dateien-und-konfigurationen"
+							aria-label="Permalink"
+							class="tsd-anchor-icon"
+							><svg
+								viewBox="0 0 24 24"
+								aria-hidden="true"
+							>
+								<use
+									href="assets/icons.svg#icon-anchor"
+								></use></svg
+						></a>
+					</h3>
+					<ul>
+						<li>
+							<p>
+								<strong>Dockerfile</strong><br />
+								Definiert, wie das Frontend als Docker-Image
+								gebaut wird. Enthält die Basis-Images,
+								Build-Anweisungen und Umgebungsvariablen für den
+								Container.
+							</p>
+						</li>
+						<li>
+							<p>
+								<strong
+									><a href="http://README.md"
+										>README.md</a
+									></strong
+								><br />
+								Grundlegende Dokumentation für das Frontend,
+								inklusive Setup, Entwicklungsanweisungen und
+								Befehlen zum Starten des Projekts.
+							</p>
+						</li>
+						<li>
+							<p>
+								<strong>components.json</strong><br />
+								Möglicherweise Metadaten oder
+								Konfigurationsdateien für wiederverwendbare
+								Komponenten.
+							</p>
+						</li>
+						<li>
+							<p>
+								<strong>next-env.d.ts</strong><br />
+								Automatisch generierte TypeScript-Datei für
+								Next.js, die die Umgebung definiert.
+							</p>
+						</li>
+						<li>
+							<p>
+								<strong>next.config.mjs</strong><br />
+								Hauptkonfigurationsdatei für Next.js. Hier
+								können Einstellungen wie Routing,
+								Bildoptimierung und Umgebungsvariablen definiert
+								werden.
+							</p>
+						</li>
+						<li>
+							<p>
+								<strong>postcss.config.mjs</strong><br />
+								Konfiguriert PostCSS, oft in Verbindung mit
+								Tailwind CSS oder anderen CSS-Frameworks
+								verwendet.
+							</p>
+						</li>
+						<li>
+							<p>
+								<strong>prettier.config.js</strong><br />
+								Konfiguriert den Code-Formatter Prettier, um den
+								Code-Stil im gesamten Projekt konsistent zu
+								halten.
+							</p>
+						</li>
+						<li>
+							<p>
+								<strong>tsconfig.json</strong><br />
+								TypeScript-Konfigurationsdatei, die
+								Typanpassungen und Compiler-Optionen festlegt.
+							</p>
+						</li>
+					</ul>
+					<hr />
+					<h3
+						id="quellcode-und-komponenten"
+						class="tsd-anchor-link"
+					>
+						<strong>Quellcode und Komponenten</strong
+						><a
+							href="#quellcode-und-komponenten"
+							aria-label="Permalink"
+							class="tsd-anchor-icon"
+							><svg
+								viewBox="0 0 24 24"
+								aria-hidden="true"
+							>
+								<use
+									href="assets/icons.svg#icon-anchor"
+								></use></svg
+						></a>
+					</h3>
+					<ul>
+						<li>
+							<p>
+								<strong>src/</strong><br />
+								Der Hauptordner für den Quellcode. Hier wird die
+								eigentliche Anwendung entwickelt. Typische
+								Unterordner sind:
+							</p>
+							<ul>
+								<li>
+									<p>
+										<strong>components/</strong><br />
+										Enthält alle wiederverwendbaren
+										UI-Komponenten. Diese sind modular
+										organisiert, um die Wartbarkeit zu
+										verbessern.
+									</p>
+								</li>
+								<li>
+									<p>
+										<strong>components/pages/</strong><br />
+										Seiten-spezifische Komponenten, z.B. für
+										Dashboards, Einstellungen oder Widgets.
+									</p>
+								</li>
+								<li>
+									<p>
+										<strong
+											>components/pages/settings/</strong
+										><br />
+										Hier werden die Einstellungskomponenten
+										definiert. Neue Einstellungen können
+										hier hinzugefügt werden.
+									</p>
+								</li>
+								<li>
+									<p>
+										<strong
+											>components/pages/widgets/</strong
+										><br />
+										Hier werden die Widgets definiert.
+										Widgets sind spezialisierte Komponenten,
+										die in Dashboards verwendet werden.
+									</p>
+								</li>
+							</ul>
+						</li>
+					</ul>
+					<hr />
+					<h2
+						id="neue-einstellungen-hinzufügen"
+						class="tsd-anchor-link"
+					>
+						<strong>Neue Einstellungen hinzufügen</strong
+						><a
+							href="#neue-einstellungen-hinzufügen"
+							aria-label="Permalink"
+							class="tsd-anchor-icon"
+							><svg
+								viewBox="0 0 24 24"
+								aria-hidden="true"
+							>
+								<use
+									href="assets/icons.svg#icon-anchor"
+								></use></svg
+						></a>
+					</h2>
+					<h3
+						id="neues-setting-erstellen"
+						class="tsd-anchor-link"
+					>
+						<strong>Neues Setting erstellen</strong
+						><a
+							href="#neues-setting-erstellen"
+							aria-label="Permalink"
+							class="tsd-anchor-icon"
+							><svg
+								viewBox="0 0 24 24"
+								aria-hidden="true"
+							>
+								<use
+									href="assets/icons.svg#icon-anchor"
+								></use></svg
+						></a>
+					</h3>
+					<ol>
+						<li>
+							<strong>Neue Setting-Datei erstellen:</strong><br />
+							Lege eine neue Datei in
+							<strong
+								><code>components/pages/settings</code></strong
+							>
+							an, z.B. <strong><code>example.tsx</code></strong
+							>:
+						</li>
+					</ol>
+					<pre><code class="tsx"><span class="hl-0">// components/pages/settings/example.tsx</span><br/><br/><span class="hl-1">import</span><span class="hl-2"> { </span><span class="hl-1">type</span><span class="hl-2"> </span><span class="hl-3">SettingsMenu</span><span class="hl-2"> } </span><span class="hl-1">from</span><span class="hl-2"> </span><span class="hl-4">&quot;..&quot;</span><span class="hl-2">;</span><br/><span class="hl-1">import</span><span class="hl-2"> { </span><span class="hl-3">LuBug</span><span class="hl-2"> } </span><span class="hl-1">from</span><span class="hl-2"> </span><span class="hl-4">&quot;react-icons/lu&quot;</span><span class="hl-2">;</span><br/><span class="hl-1">import</span><span class="hl-2"> </span><span class="hl-3">MyNewSettingsComponent</span><span class="hl-2"> </span><span class="hl-1">from</span><span class="hl-2"> </span><span class="hl-4">&quot;./MyNewSettingsComponent&quot;</span><span class="hl-2">;</span><br/><br/><span class="hl-1">export</span><span class="hl-2"> </span><span class="hl-5">const</span><span class="hl-2"> </span><span class="hl-6">example</span><span class="hl-2">: </span><span class="hl-7">SettingsMenu</span><span class="hl-2"> = {</span><br/><span class="hl-2">    </span><span class="hl-3">id:</span><span class="hl-2"> </span><span class="hl-4">&quot;example&quot;</span><span class="hl-2">,</span><br/><span class="hl-2">    </span><span class="hl-3">label:</span><span class="hl-2"> </span><span class="hl-4">&quot;Example&quot;</span><span class="hl-2">,</span><br/><span class="hl-2">    </span><span class="hl-3">icon:</span><span class="hl-2"> </span><span class="hl-8">&lt;</span><span class="hl-7">LuBug</span><span class="hl-2"> </span><span class="hl-9">size</span><span class="hl-2">=</span><span class="hl-5">{</span><span class="hl-10">16</span><span class="hl-5">}</span><span class="hl-2"> </span><span class="hl-8">/&gt;</span><span class="hl-2">,</span><br/><span class="hl-2">    </span><span class="hl-3">title:</span><span class="hl-2"> </span><span class="hl-4">&quot;Example Settings&quot;</span><span class="hl-2">,</span><br/><span class="hl-2">    </span><span class="hl-3">description:</span><span class="hl-2"> </span><span class="hl-4">&quot;Customize your example settings.&quot;</span><span class="hl-2">,</span><br/><span class="hl-2">    </span><span class="hl-3">sections:</span><span class="hl-2"> [</span><br/><span class="hl-2">        {</span><br/><span class="hl-2">            </span><span class="hl-3">id:</span><span class="hl-2"> </span><span class="hl-4">&quot;example-section&quot;</span><span class="hl-2">,</span><br/><span class="hl-2">            </span><span class="hl-3">title:</span><span class="hl-2"> </span><span class="hl-4">&quot;New Setting&quot;</span><span class="hl-2">,</span><br/><span class="hl-2">            </span><span class="hl-3">description:</span><span class="hl-2"> </span><span class="hl-4">&quot;Description for your new setting.&quot;</span><span class="hl-2">,</span><br/><span class="hl-2">            </span><span class="hl-3">component:</span><span class="hl-2"> </span><span class="hl-8">&lt;</span><span class="hl-7">MyNewSettingsComponent</span><span class="hl-2"> </span><span class="hl-8">/&gt;</span><span class="hl-2">,</span><br/><span class="hl-2">        },</span><br/><span class="hl-2">    ],</span><br/><span class="hl-2">};</span>
+</code><button type="button">Copy</button></pre>
+
+					<ol start="2">
+						<li>
+							<strong>Neues Setting registrieren:</strong><br />
+							Füge die neue Setting-Datei in der
+							<strong><code>index.ts</code></strong> hinzu:
+						</li>
+					</ol>
+					<pre><code class="tsx"><span class="hl-0">// components/pages/settings/index.ts</span><br/><br/><span class="hl-1">import</span><span class="hl-2"> { </span><span class="hl-3">SettingsMenu</span><span class="hl-2"> } </span><span class="hl-1">from</span><span class="hl-2"> </span><span class="hl-4">&quot;..&quot;</span><span class="hl-2">;</span><br/><span class="hl-1">import</span><span class="hl-2"> { </span><span class="hl-3">example</span><span class="hl-2"> } </span><span class="hl-1">from</span><span class="hl-2"> </span><span class="hl-4">&quot;./example&quot;</span><span class="hl-2">;</span><br/><span class="hl-1">import</span><span class="hl-2"> { </span><span class="hl-3">otherSetting</span><span class="hl-2"> } </span><span class="hl-1">from</span><span class="hl-2"> </span><span class="hl-4">&quot;./otherSetting&quot;</span><span class="hl-2">; </span><span class="hl-0">// Beispiel für ein anderes Setting</span><br/><br/><span class="hl-1">export</span><span class="hl-2"> </span><span class="hl-5">const</span><span class="hl-2"> </span><span class="hl-6">settingsMenus</span><span class="hl-2">: </span><span class="hl-7">SettingsMenu</span><span class="hl-2">[] = [</span><br/><span class="hl-2">    </span><span class="hl-3">example</span><span class="hl-2">,</span><br/><span class="hl-2">    </span><span class="hl-3">otherSetting</span><span class="hl-2">,</span><br/><span class="hl-2">    </span><span class="hl-0">// Weitere Settings hier hinzufügen</span><br/><span class="hl-2">];</span>
+</code><button type="button">Copy</button></pre>
+
+					<hr />
+					<h2
+						id="neues-widget-hinzufügen"
+						class="tsd-anchor-link"
+					>
+						<strong>Neues Widget hinzufügen</strong
+						><a
+							href="#neues-widget-hinzufügen"
+							aria-label="Permalink"
+							class="tsd-anchor-icon"
+							><svg
+								viewBox="0 0 24 24"
+								aria-hidden="true"
+							>
+								<use
+									href="assets/icons.svg#icon-anchor"
+								></use></svg
+						></a>
+					</h2>
+					<h3
+						id="widget-verzeichnis-anlegen"
+						class="tsd-anchor-link"
+					>
+						<strong>Widget-Verzeichnis anlegen</strong
+						><a
+							href="#widget-verzeichnis-anlegen"
+							aria-label="Permalink"
+							class="tsd-anchor-icon"
+							><svg
+								viewBox="0 0 24 24"
+								aria-hidden="true"
+							>
+								<use
+									href="assets/icons.svg#icon-anchor"
+								></use></svg
+						></a>
+					</h3>
+					<ol>
+						<li>
+							<strong>Neuen Widget-Ordner erstellen:</strong
+							><br />
+							Lege in
+							<strong
+								><code>components/pages/widgets</code></strong
+							>
+							einen neuen Ordner an, z.B.
+							<strong><code>example</code></strong
+							>:
+						</li>
+					</ol>
+					<pre><code><span class="hl-3">components</span><span class="hl-2">/</span><span class="hl-3">pages</span><span class="hl-2">/</span><span class="hl-3">widgets</span><span class="hl-2">/</span><span class="hl-3">example</span><span class="hl-2">/</span><br/><span class="hl-2">├── </span><span class="hl-3">index</span><span class="hl-2">.</span><span class="hl-3">tsx</span><br/><span class="hl-2">├── </span><span class="hl-3">small</span><span class="hl-2">.</span><span class="hl-3">tsx</span><br/><span class="hl-2">├── </span><span class="hl-3">medium</span><span class="hl-2">.</span><span class="hl-3">tsx</span><br/><span class="hl-2">└── </span><span class="hl-3">large</span><span class="hl-2">.</span><span class="hl-3">tsx</span>
+</code><button>Copy</button></pre>
+
+					<ol start="2">
+						<li>
+							<strong>Widget-Komponenten erstellen:</strong><br />
+							Lege die verschiedenen Größenkomponenten an, z.B.
+							<strong>small.tsx</strong>:
+						</li>
+					</ol>
+					<pre><code class="tsx"><span class="hl-0">// components/pages/widgets/example/small.tsx</span><br/><br/><span class="hl-1">import</span><span class="hl-2"> </span><span class="hl-3">React</span><span class="hl-2"> </span><span class="hl-1">from</span><span class="hl-2"> </span><span class="hl-4">&quot;react&quot;</span><span class="hl-2">;</span><br/><br/><span class="hl-5">const</span><span class="hl-2"> </span><span class="hl-11">ExampleSmall</span><span class="hl-2">: </span><span class="hl-7">React</span><span class="hl-2">.</span><span class="hl-7">FC</span><span class="hl-2"> = () </span><span class="hl-5">=&gt;</span><span class="hl-2"> {</span><br/><span class="hl-2">    </span><span class="hl-1">return</span><span class="hl-2"> </span><span class="hl-8">&lt;</span><span class="hl-12">div</span><span class="hl-8">&gt;</span><span class="hl-2">Example Small Widget</span><span class="hl-8">&lt;/</span><span class="hl-12">div</span><span class="hl-8">&gt;</span><span class="hl-2">;</span><br/><span class="hl-2">};</span><br/><br/><span class="hl-1">export</span><span class="hl-2"> </span><span class="hl-1">default</span><span class="hl-2"> </span><span class="hl-3">ExampleSmall</span><span class="hl-2">;</span>
+</code><button type="button">Copy</button></pre>
+
+					<ol start="3">
+						<li>
+							<strong>Widget-Definition hinzufügen:</strong><br />
+							Definiere die Widgets in der
+							<strong><code>index.tsx</code></strong
+							>:
+						</li>
+					</ol>
+					<pre><code class="tsx"><span class="hl-0">// components/pages/widgets/example/index.tsx</span><br/><br/><span class="hl-1">import</span><span class="hl-2"> { </span><span class="hl-3">WidgetCategory</span><span class="hl-2"> } </span><span class="hl-1">from</span><span class="hl-2"> </span><span class="hl-4">&quot;@/types/dashboard&quot;</span><span class="hl-2">;</span><br/><span class="hl-1">import</span><span class="hl-2"> { </span><span class="hl-3">LuBug</span><span class="hl-2"> } </span><span class="hl-1">from</span><span class="hl-2"> </span><span class="hl-4">&quot;react-icons/lu&quot;</span><span class="hl-2">;</span><br/><span class="hl-1">import</span><span class="hl-2"> </span><span class="hl-3">ExampleSmall</span><span class="hl-2"> </span><span class="hl-1">from</span><span class="hl-2"> </span><span class="hl-4">&quot;./small&quot;</span><span class="hl-2">;</span><br/><span class="hl-1">import</span><span class="hl-2"> </span><span class="hl-3">ExampleMedium</span><span class="hl-2"> </span><span class="hl-1">from</span><span class="hl-2"> </span><span class="hl-4">&quot;./medium&quot;</span><span class="hl-2">;</span><br/><span class="hl-1">import</span><span class="hl-2"> </span><span class="hl-3">ExampleLarge</span><span class="hl-2"> </span><span class="hl-1">from</span><span class="hl-2"> </span><span class="hl-4">&quot;./large&quot;</span><span class="hl-2">;</span><br/><br/><span class="hl-1">export</span><span class="hl-2"> </span><span class="hl-5">const</span><span class="hl-2"> </span><span class="hl-6">exampleWidgets</span><span class="hl-2">: </span><span class="hl-7">WidgetCategory</span><span class="hl-2"> = {</span><br/><span class="hl-2">    </span><span class="hl-3">type:</span><span class="hl-2"> </span><span class="hl-4">&quot;EXAMPLE&quot;</span><span class="hl-2">,</span><br/><span class="hl-2">    </span><span class="hl-3">title:</span><span class="hl-2"> </span><span class="hl-4">&quot;Example&quot;</span><span class="hl-2">,</span><br/><span class="hl-2">    </span><span class="hl-3">icon:</span><span class="hl-2"> </span><span class="hl-8">&lt;</span><span class="hl-7">LuBug</span><span class="hl-2"> </span><span class="hl-8">/&gt;</span><span class="hl-2">,</span><br/><span class="hl-2">    </span><span class="hl-3">color:</span><span class="hl-2"> </span><span class="hl-4">&quot;#00A0FF&quot;</span><span class="hl-2">,</span><br/><span class="hl-2">    </span><span class="hl-3">widgets:</span><span class="hl-2"> [</span><br/><span class="hl-2">        {</span><br/><span class="hl-2">            </span><span class="hl-3">title:</span><span class="hl-2"> </span><span class="hl-4">&quot;Small Example Widget&quot;</span><span class="hl-2">,</span><br/><span class="hl-2">            </span><span class="hl-3">description:</span><span class="hl-2"> </span><span class="hl-4">&quot;A small example widget&quot;</span><span class="hl-2">,</span><br/><span class="hl-2">            </span><span class="hl-3">w:</span><span class="hl-2"> </span><span class="hl-10">1</span><span class="hl-2">,</span><br/><span class="hl-2">            </span><span class="hl-3">h:</span><span class="hl-2"> </span><span class="hl-10">1</span><span class="hl-2">,</span><br/><span class="hl-2">            </span><span class="hl-3">component:</span><span class="hl-2"> </span><span class="hl-8">&lt;</span><span class="hl-7">ExampleSmall</span><span class="hl-2"> </span><span class="hl-8">/&gt;</span><span class="hl-2">,</span><br/><span class="hl-2">        },</span><br/><span class="hl-2">        {</span><br/><span class="hl-2">            </span><span class="hl-3">title:</span><span class="hl-2"> </span><span class="hl-4">&quot;Medium Example Widget&quot;</span><span class="hl-2">,</span><br/><span class="hl-2">            </span><span class="hl-3">description:</span><span class="hl-2"> </span><span class="hl-4">&quot;A medium example widget&quot;</span><span class="hl-2">,</span><br/><span class="hl-2">            </span><span class="hl-3">w:</span><span class="hl-2"> </span><span class="hl-10">2</span><span class="hl-2">,</span><br/><span class="hl-2">            </span><span class="hl-3">h:</span><span class="hl-2"> </span><span class="hl-10">1</span><span class="hl-2">,</span><br/><span class="hl-2">            </span><span class="hl-3">component:</span><span class="hl-2"> </span><span class="hl-8">&lt;</span><span class="hl-7">ExampleMedium</span><span class="hl-2"> </span><span class="hl-8">/&gt;</span><span class="hl-2">,</span><br/><span class="hl-2">        },</span><br/><span class="hl-2">        {</span><br/><span class="hl-2">            </span><span class="hl-3">title:</span><span class="hl-2"> </span><span class="hl-4">&quot;Large Example Widget&quot;</span><span class="hl-2">,</span><br/><span class="hl-2">            </span><span class="hl-3">description:</span><span class="hl-2"> </span><span class="hl-4">&quot;A large example widget&quot;</span><span class="hl-2">,</span><br/><span class="hl-2">            </span><span class="hl-3">w:</span><span class="hl-2"> </span><span class="hl-10">2</span><span class="hl-2">,</span><br/><span class="hl-2">            </span><span class="hl-3">h:</span><span class="hl-2"> </span><span class="hl-10">2</span><span class="hl-2">,</span><br/><span class="hl-2">            </span><span class="hl-3">component:</span><span class="hl-2"> </span><span class="hl-8">&lt;</span><span class="hl-7">ExampleLarge</span><span class="hl-2"> </span><span class="hl-8">/&gt;</span><span class="hl-2">,</span><br/><span class="hl-2">        },</span><br/><span class="hl-2">    ],</span><br/><span class="hl-2">};</span>
+</code><button type="button">Copy</button></pre>
+
+					<ol start="4">
+						<li>
+							<strong>Widget-Kategorie hinzufügen:</strong><br />
+							Füge die neue Widget-Kategorie in der
+							<strong><code>index.ts</code></strong> hinzu:
+						</li>
+					</ol>
+					<pre><code class="tsx"><span class="hl-0">// components/pages/widgets/index.ts</span><br/><br/><span class="hl-1">import</span><span class="hl-2"> { </span><span class="hl-3">WidgetCategory</span><span class="hl-2"> } </span><span class="hl-1">from</span><span class="hl-2"> </span><span class="hl-4">&quot;@/types/dashboard&quot;</span><span class="hl-2">;</span><br/><span class="hl-1">import</span><span class="hl-2"> { </span><span class="hl-3">exampleWidgets</span><span class="hl-2"> } </span><span class="hl-1">from</span><span class="hl-2"> </span><span class="hl-4">&quot;./example&quot;</span><span class="hl-2">;</span><br/><span class="hl-1">import</span><span class="hl-2"> { </span><span class="hl-3">otherWidgets</span><span class="hl-2"> } </span><span class="hl-1">from</span><span class="hl-2"> </span><span class="hl-4">&quot;./other&quot;</span><span class="hl-2">;</span><br/><br/><span class="hl-1">export</span><span class="hl-2"> </span><span class="hl-5">const</span><span class="hl-2"> </span><span class="hl-6">widgetCategories</span><span class="hl-2">: </span><span class="hl-7">WidgetCategory</span><span class="hl-2">[] = [</span><br/><span class="hl-2">    </span><span class="hl-3">exampleWidgets</span><span class="hl-2">,</span><br/><span class="hl-2">    </span><span class="hl-3">otherWidgets</span><span class="hl-2">,</span><br/><span class="hl-2">    </span><span class="hl-0">// Weitere Widgets hier hinzufügen</span><br/><span class="hl-2">];</span>
+</code><button type="button">Copy</button></pre>
+
+					<h3
+						id="session-management"
+						class="tsd-anchor-link"
+					>
+						Session-Management<a
+							href="#session-management"
+							aria-label="Permalink"
+							class="tsd-anchor-icon"
+							><svg
+								viewBox="0 0 24 24"
+								aria-hidden="true"
+							>
+								<use
+									href="assets/icons.svg#icon-anchor"
+								></use></svg
+						></a>
+					</h3>
+					<p>
+						Für die Verwaltung der aktuellen Benutzersitzung wird
+						der <code>useSession</code>-Hook verwendet. Dieser Hook
+						stellt wichtige Sitzungsdaten und Funktionen zur
+						Verfügung und muss innerhalb eines
+						<code>AuthContextProvider</code> verwendet werden.
+					</p>
+					<h4
+						id="verwendung-des-hooks"
+						class="tsd-anchor-link"
+					>
+						Verwendung des Hooks<a
+							href="#verwendung-des-hooks"
+							aria-label="Permalink"
+							class="tsd-anchor-icon"
+							><svg
+								viewBox="0 0 24 24"
+								aria-hidden="true"
+							>
+								<use
+									href="assets/icons.svg#icon-anchor"
+								></use></svg
+						></a>
+					</h4>
+					<pre><code class="tsx"><span class="hl-1">import</span><span class="hl-2"> { </span><span class="hl-3">useSession</span><span class="hl-2"> } </span><span class="hl-1">from</span><span class="hl-2"> </span><span class="hl-4">&quot;@/hooks/use-session&quot;</span><span class="hl-2">;</span><br/><br/><span class="hl-5">function</span><span class="hl-2"> </span><span class="hl-11">MyComponent</span><span class="hl-2">() {</span><br/><span class="hl-2">    </span><span class="hl-5">const</span><span class="hl-2"> </span><span class="hl-6">session</span><span class="hl-2"> = </span><span class="hl-11">useSession</span><span class="hl-2">();</span><br/><br/><span class="hl-2">    </span><span class="hl-3">console</span><span class="hl-2">.</span><span class="hl-11">log</span><span class="hl-2">(</span><span class="hl-3">session</span><span class="hl-2">.</span><span class="hl-3">user</span><span class="hl-2">);   </span><span class="hl-0">// Zugriff auf den aktuellen Benutzer</span><br/><span class="hl-2">    </span><span class="hl-3">console</span><span class="hl-2">.</span><span class="hl-11">log</span><span class="hl-2">(</span><span class="hl-3">session</span><span class="hl-2">.</span><span class="hl-3">status</span><span class="hl-2">); </span><span class="hl-0">// Status der aktuellen Sitzung (&quot;authenticated&quot;, &quot;unauthenticated&quot;, &quot;loading&quot;)</span><br/><span class="hl-2">    </span><br/><span class="hl-2">    </span><span class="hl-0">// Benutzerprofil aktualisieren</span><br/><span class="hl-2">    </span><span class="hl-5">const</span><span class="hl-2"> </span><span class="hl-11">updateProfile</span><span class="hl-2"> = () </span><span class="hl-5">=&gt;</span><span class="hl-2"> {</span><br/><span class="hl-2">        </span><span class="hl-3">session</span><span class="hl-2">.</span><span class="hl-11">update</span><span class="hl-2">({</span><br/><span class="hl-2">            </span><span class="hl-3">username:</span><span class="hl-2"> </span><span class="hl-4">&quot;NewUsername&quot;</span><span class="hl-2">,</span><br/><span class="hl-2">            </span><span class="hl-3">email:</span><span class="hl-2"> </span><span class="hl-4">&quot;newemail@example.com&quot;</span><span class="hl-2">,</span><br/><span class="hl-2">        });</span><br/><span class="hl-2">    };</span><br/><br/><span class="hl-2">    </span><span class="hl-1">return</span><span class="hl-2"> (</span><br/><span class="hl-2">        </span><span class="hl-8">&lt;</span><span class="hl-12">div</span><span class="hl-8">&gt;</span><br/><span class="hl-2">            </span><span class="hl-8">&lt;</span><span class="hl-12">h1</span><span class="hl-8">&gt;</span><span class="hl-2">Welcome, </span><span class="hl-5">{</span><span class="hl-3">session</span><span class="hl-13">.</span><span class="hl-3">user</span><span class="hl-13">?.</span><span class="hl-3">username</span><span class="hl-5">}</span><span class="hl-8">&lt;/</span><span class="hl-12">h1</span><span class="hl-8">&gt;</span><br/><span class="hl-2">            </span><span class="hl-8">&lt;</span><span class="hl-12">button</span><span class="hl-2"> </span><span class="hl-9">onClick</span><span class="hl-2">=</span><span class="hl-5">{</span><span class="hl-3">updateProfile</span><span class="hl-5">}</span><span class="hl-8">&gt;</span><span class="hl-2">Update Profile</span><span class="hl-8">&lt;/</span><span class="hl-12">button</span><span class="hl-8">&gt;</span><br/><span class="hl-2">        </span><span class="hl-8">&lt;/</span><span class="hl-12">div</span><span class="hl-8">&gt;</span><br/><span class="hl-2">    );</span><br/><span class="hl-2">}</span>
+</code><button type="button">Copy</button></pre>
+
+					<h4
+						id="verfügbare-eigenschaften-und-methoden"
+						class="tsd-anchor-link"
+					>
+						Verfügbare Eigenschaften und Methoden<a
+							href="#verfügbare-eigenschaften-und-methoden"
+							aria-label="Permalink"
+							class="tsd-anchor-icon"
+							><svg
+								viewBox="0 0 24 24"
+								aria-hidden="true"
+							>
+								<use
+									href="assets/icons.svg#icon-anchor"
+								></use></svg
+						></a>
+					</h4>
+					<ul>
+						<li>
+							<p>
+								<strong><code>session.user</code></strong
+								><br />
+								Enthält die aktuellen Benutzerdaten (z.B.
+								Benutzername, E-Mail).
+							</p>
+						</li>
+						<li>
+							<p>
+								<strong><code>session.status</code></strong
+								><br />
+								Der Status der Sitzung, kann folgende Werte
+								annehmen:
+							</p>
+							<ul>
+								<li>
+									<code>&quot;loading&quot;</code> – Sitzung
+									wird geladen
+								</li>
+								<li>
+									<code>&quot;authenticated&quot;</code> –
+									Benutzer ist eingeloggt
+								</li>
+								<li>
+									<code>&quot;unauthenticated&quot;</code> –
+									Benutzer ist nicht eingeloggt
+								</li>
+							</ul>
+						</li>
+						<li>
+							<p>
+								<strong
+									><code
+										>session.update(data:
+										UserUpdateRequest)</code
+									></strong
+								><br />
+								Aktualisiert die Benutzerdaten auf dem Server
+								und lädt die Sitzung neu.
+							</p>
+						</li>
+					</ul>
+					<h4
+						id="hinweise-zur-implementierung"
+						class="tsd-anchor-link"
+					>
+						Hinweise zur Implementierung<a
+							href="#hinweise-zur-implementierung"
+							aria-label="Permalink"
+							class="tsd-anchor-icon"
+							><svg
+								viewBox="0 0 24 24"
+								aria-hidden="true"
+							>
+								<use
+									href="assets/icons.svg#icon-anchor"
+								></use></svg
+						></a>
+					</h4>
+					<ul>
+						<li>
+							Der Hook verwendet intern den
+							<code>AuthContext</code>, um den Sitzungsstatus und
+							die Benutzerdaten zu verwalten.
+						</li>
+						<li>
+							Ein automatisches Revalidieren der Sitzung findet
+							bei jeder Aktualisierung der Benutzerdaten statt.
+						</li>
+						<li>
+							Achte darauf, dass der
+							<code>AuthContextProvider</code> in der
+							Komponenten-Hierarchie über jedem Aufruf von
+							<code>useSession</code> liegt.
+						</li>
+					</ul>
+					<hr />
+					<h3
+						id="testen-und-anpassen"
+						class="tsd-anchor-link"
+					>
+						<strong>Testen und Anpassen</strong
+						><a
+							href="#testen-und-anpassen"
+							aria-label="Permalink"
+							class="tsd-anchor-icon"
+							><svg
+								viewBox="0 0 24 24"
+								aria-hidden="true"
+							>
+								<use
+									href="assets/icons.svg#icon-anchor"
+								></use></svg
+						></a>
+					</h3>
+					<p>
+						Stelle sicher, dass dein neues Widget in der
+						Dashboard-Oberfläche erscheint und korrekt skaliert.
+					</p>
+					<hr />
+				</div>
+			</div>
+			<div class="col-sidebar">
+				<div class="page-menu">
+					<div class="tsd-navigation settings">
+						<details class="tsd-accordion">
+							<summary class="tsd-accordion-summary">
+								<svg
+									width="20"
+									height="20"
+									viewBox="0 0 24 24"
+									fill="none"
+									aria-hidden="true"
+								>
+									<use
+										href="assets/icons.svg#icon-chevronDown"
+									></use>
+								</svg>
+								<h3>Settings</h3>
+							</summary>
+							<div class="tsd-accordion-details">
+								<div class="tsd-filter-visibility">
+									<span class="settings-label"
+										>Member Visibility</span
+									>
+									<ul id="tsd-filter-options">
+										<li class="tsd-filter-item">
+											<label class="tsd-filter-input"
+												><input
+													type="checkbox"
+													id="tsd-filter-protected"
+													name="protected"
+												/><svg
+													width="32"
+													height="32"
+													viewBox="0 0 32 32"
+													aria-hidden="true"
+												>
+													<rect
+														class="tsd-checkbox-background"
+														width="30"
+														height="30"
+														x="1"
+														y="1"
+														rx="6"
+														fill="none"
+													></rect>
+													<path
+														class="tsd-checkbox-checkmark"
+														d="M8.35422 16.8214L13.2143 21.75L24.6458 10.25"
+														stroke="none"
+														stroke-width="3.5"
+														stroke-linejoin="round"
+														fill="none"
+													></path></svg
+												><span>Protected</span></label
+											>
+										</li>
+										<li class="tsd-filter-item">
+											<label class="tsd-filter-input"
+												><input
+													type="checkbox"
+													id="tsd-filter-inherited"
+													name="inherited"
+													checked
+												/><svg
+													width="32"
+													height="32"
+													viewBox="0 0 32 32"
+													aria-hidden="true"
+												>
+													<rect
+														class="tsd-checkbox-background"
+														width="30"
+														height="30"
+														x="1"
+														y="1"
+														rx="6"
+														fill="none"
+													></rect>
+													<path
+														class="tsd-checkbox-checkmark"
+														d="M8.35422 16.8214L13.2143 21.75L24.6458 10.25"
+														stroke="none"
+														stroke-width="3.5"
+														stroke-linejoin="round"
+														fill="none"
+													></path></svg
+												><span>Inherited</span></label
+											>
+										</li>
+										<li class="tsd-filter-item">
+											<label class="tsd-filter-input"
+												><input
+													type="checkbox"
+													id="tsd-filter-external"
+													name="external"
+												/><svg
+													width="32"
+													height="32"
+													viewBox="0 0 32 32"
+													aria-hidden="true"
+												>
+													<rect
+														class="tsd-checkbox-background"
+														width="30"
+														height="30"
+														x="1"
+														y="1"
+														rx="6"
+														fill="none"
+													></rect>
+													<path
+														class="tsd-checkbox-checkmark"
+														d="M8.35422 16.8214L13.2143 21.75L24.6458 10.25"
+														stroke="none"
+														stroke-width="3.5"
+														stroke-linejoin="round"
+														fill="none"
+													></path></svg
+												><span>External</span></label
+											>
+										</li>
+									</ul>
+								</div>
+								<div class="tsd-theme-toggle">
+									<label
+										class="settings-label"
+										for="tsd-theme"
+										>Theme</label
+									><select id="tsd-theme">
+										<option value="os">OS</option>
+										<option value="light">Light</option>
+										<option value="dark">Dark</option>
+									</select>
+								</div>
+							</div>
+						</details>
+					</div>
+					<details
+						open
+						class="tsd-accordion tsd-page-navigation"
+					>
+						<summary class="tsd-accordion-summary">
+							<svg
+								width="20"
+								height="20"
+								viewBox="0 0 24 24"
+								fill="none"
+								aria-hidden="true"
+							>
+								<use
+									href="assets/icons.svg#icon-chevronDown"
+								></use>
+							</svg>
+							<h3>On This Page</h3>
+						</summary>
+						<div class="tsd-accordion-details">
+							<a href="#projektstruktur"
+								><span>Projektstruktur</span></a
+							>
+							<ul>
+								<li>
+									<a
+										href="#wichtige-dateien-und-konfigurationen"
+										><span
+											>Wichtige <wbr />Dateien und
+											<wbr />Konfigurationen</span
+										></a
+									>
+								</li>
+								<li>
+									<a href="#quellcode-und-komponenten"
+										><span
+											>Quellcode und
+											<wbr />Komponenten</span
+										></a
+									>
+								</li>
+							</ul>
+							<a href="#neue-einstellungen-hinzufügen"
+								><span
+									>Neue <wbr />Einstellungen hinzufügen</span
+								></a
+							>
+							<ul>
+								<li>
+									<a href="#neues-setting-erstellen"
+										><span
+											>Neues <wbr />Setting
+											erstellen</span
+										></a
+									>
+								</li>
+							</ul>
+							<a href="#neues-widget-hinzufügen"
+								><span>Neues <wbr />Widget hinzufügen</span></a
+							>
+							<ul>
+								<li>
+									<a href="#widget-verzeichnis-anlegen"
+										><span
+											>Widget-<wbr />Verzeichnis
+											anlegen</span
+										></a
+									>
+								</li>
+								<li>
+									<a href="#session-management"
+										><span
+											>Session-<wbr />Management</span
+										></a
+									>
+								</li>
+								<li>
+									<ul>
+										<li>
+											<a href="#verwendung-des-hooks"
+												><span
+													>Verwendung des
+													<wbr />Hooks</span
+												></a
+											>
+										</li>
+										<li>
+											<a
+												href="#verfügbare-eigenschaften-und-methoden"
+												><span
+													>Verfügbare
+													<wbr />Eigenschaften und
+													<wbr />Methoden</span
+												></a
+											>
+										</li>
+										<li>
+											<a
+												href="#hinweise-zur-implementierung"
+												><span
+													>Hinweise zur
+													<wbr />Implementierung</span
+												></a
+											>
+										</li>
+									</ul>
+								</li>
+								<li>
+									<a href="#testen-und-anpassen"
+										><span
+											>Testen und <wbr />Anpassen</span
+										></a
+									>
+								</li>
+							</ul>
+						</div>
+					</details>
+				</div>
+				<div class="site-menu">
+					<nav class="tsd-navigation">
+						<a href="modules.html">frontend</a>
+						<ul
+							class="tsd-small-nested-navigation"
+							id="tsd-nav-container"
+						>
+							<li>Loading...</li>
+						</ul>
+					</nav>
+				</div>
+			</div>
+		</div>
+		<footer>
+			<p class="tsd-generator">
+				Generated using
+				<a
+					href="https://typedoc.org/"
+					target="_blank"
+					>TypeDoc</a
+				>
+			</p>
+		</footer>
+		<div class="overlay"></div>
+	</body>
+</html>

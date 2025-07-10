@@ -1,0 +1,26 @@
+services:
+  dashify_backend_e2e:
+    image: registry.gitlab.com/dhbw-se/se-tinf23b6/g3-dashify/backend:latest
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:postgresql://dashify_postgres_e2e:5432/dashify
+      SPRING_DATASOURCE_USERNAME: dashify
+      SPRING_DATASOURCE_PASSWORD: dashify
+    depends_on:
+      - dashify_postgres_e2e
+    networks:
+      - e2e_network
+    ports:
+      - "8080:8080"
+
+  dashify_postgres_e2e:
+    image: postgres:14
+    environment:
+      POSTGRES_DB: dashify
+      POSTGRES_USER: dashify
+      POSTGRES_PASSWORD: dashify
+    networks:
+      - e2e_network
+
+networks:
+  e2e_network:
+    driver: bridge

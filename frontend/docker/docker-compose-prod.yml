@@ -1,0 +1,14 @@
+services:
+  dashify_frontend_prod:
+    container_name: dashify_frontend_prod
+    image: registry.gitlab.com/dhbw-se/se-tinf23b6/g3-dashify/frontend:latest
+    ports:
+      - "3000:3000"
+    environment:
+      NEXT_PUBLIC_BACKEND_URL: "https://backend-prod.dashify.cloud"
+    networks:
+      - prod-network
+
+networks:
+  prod-network:
+    external: true

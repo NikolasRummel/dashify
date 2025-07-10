@@ -1,0 +1,11 @@
+services:
+  postgres:
+    image: postgres:17
+    container_name: dashify_postgres_local
+    restart: always
+    ports:
+      - "5541:5432"
+    environment:
+      POSTGRES_PASSWORD: dashify
+      POSTGRES_USER: dashify
+      POSTGRES_DB: dashify

@@ -1,0 +1,6 @@
+services:
+  dashify_frontend_local:
+    container_name: dashify_frontend_local
+    image: registry.gitlab.com/dhbw-se/se-tinf23b6/g3-dashify/frontend:latest
+    ports:
+      - "3001:3000"

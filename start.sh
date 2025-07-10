@@ -55,6 +55,10 @@ echo "✅ Backend deployed successfully"
 cd ../frontend
 echo "🎨 Step 3: Starting Frontend Development Server"
 echo "Building Frontend Docker Image for Dev"
+# Install dependencies
+echo "📦 Installing frontend dependencies..."
+# Skip the prepare script that runs husky
+npm install --ignore-scripts
 # Kill any existing npm process on port 3001
 pkill -f "next dev" || true
 # Set environment variable for backend URL

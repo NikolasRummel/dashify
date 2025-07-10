@@ -12,7 +12,10 @@ pkill -f "next dev" || echo "   No frontend process found"
 # Stop backend containers
 echo "🔧 Stopping Backend Services..."
 cd backend
-docker-compose down 2>/dev/null || echo "   Backend containers already stopped"
+# Stop the dev backend container specifically
+docker-compose -f docker-compose-dev.yml down 2>/dev/null || echo "   Dev backend containers already stopped"
+# Also try the default compose file
+docker-compose down 2>/dev/null || echo "   Default backend containers already stopped"
 
 # Stop frontend container if it exists
 echo "🎨 Stopping Frontend Container..."

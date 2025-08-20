@@ -1,4 +1,4 @@
-FROM --platform=linux/arm64 node:22
+FROM node:20
 
 # Set working directory
 WORKDIR /app
@@ -9,8 +9,10 @@ RUN npm cache clean --force
 # Copy package files
 COPY package*.json ./
 
-# Install dependencies with compatibility mode
-RUN npm install --legacy-peer-deps
+# Install dependencies and rebuild lightningcss
+RUN npm install --legacy-peer-deps --include=optional --verbose \
+  && npm rebuild lightningcss --build-from-source --verbose \
+  && npm install lightningcss-linux-arm64-gnu
 
 # Copy all other frontend files
 COPY . .
